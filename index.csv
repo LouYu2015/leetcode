@@ -5,4 +5,5 @@ id, name, difficulty,time  ranking,space ranking
 4,Median of Two Sorted Arrays,3,92.18,92.8
 13,Roman to Integer,1,82.51,72.09
 455,Assign Cookies,1,89.2,76.21
+563,Binary Tree Tilt,1,60.48,9.92
 966,Vowel Spellchecker,2,27.87,20.69
