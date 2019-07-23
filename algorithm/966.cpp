@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<string> spellchecker(vector<string>& wordlist, vector<string>& queries) {
-        map<string, string> dict, cap_dict, vowel_dict;
+        unordered_map<string, string> dict, cap_dict, vowel_dict;
         for (int i = wordlist.size() - 1; i >= 0; i--) {
             // Original word
             string orig = wordlist[i];
