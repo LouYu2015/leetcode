@@ -2,4 +2,4 @@ id, name, difficulty,time  ranking,space ranking
 1, Two Sum,1,99.79,
 2, Add Two Numbers,2,45.87,
 3, Longest Substring Without Repeating Characters,2,95.77,
-4,Median of Two Sorted Arrays,3,WA,
+4,Median of Two Sorted Arrays,3,92.18,92.8

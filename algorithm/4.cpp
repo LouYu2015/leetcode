@@ -1,40 +1,29 @@
 class Solution {
 public:
+    // This is O(n) solution
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        int low1 = 0, high1 = nums1.size(), mid1;
-        int low2 = 0, high2 = nums2.size(), mid2;
-        int target_index = (nums1.size() + nums2.size()) / 2;
-        
-        while (high1 > low1) {
-            mid1 = (low1 + high1)/2;
-            mid2 = binary_search(nums2, low2, high2, nums1[mid1]);
-            if (mid1 + mid2 > target_index) {
-                high1 = mid1;
+        int i = 0, j = 0;
+        int n1 = nums1.size(), n2 = nums2.size();
+        int n = (n1 + n2) / 2;
+        if ((n1 + n2) % 2 == 0)
+            n--;
+        while (i + j < n) {
+            if (j >= n2 || (i < n1 && nums1[i] < nums2[j])) {
+                i++;
             } else {
-                low1 = mid1 + 1;
+                j++;
             }
         }
-        
-        if (mid1 + mid2 == target_index) {
-            return nums1[mid1];
-        } else {
-            return nums2[target_index - mid1]; 
-        }
-    }
-    
-    // Return the smallest index of numbers that are greater or equal to target
-    int binary_search(vector<int> &nums, int low, int high, int target) {
-        int mid = (low + high)/2;
-        while (high > low) {
-            if (nums[mid] > target) {
-                high = mid;
-            } else if (nums[mid] == target && (mid == 0 || nums[mid - 1] < target)) {
-                return mid;
+        double result = (j >= n2 || (i < n1 && nums1[i] < nums2[j])) ? nums1[i] : nums2[j];
+        if ((n1 + n2) % 2 == 0) {
+            if (j >= n2 || (i < n1 && nums1[i] < nums2[j])) {
+                i++;
             } else {
-                low = mid + 1;
+                j++;
             }
-            mid = (low + high)/2;
+            int second_largest = (j >= n2 || (i < n1 && nums1[i] < nums2[j])) ? nums1[i] : nums2[j];
+            result = (result + second_largest) / 2;
         }
-        return low;
+        return result;
     }
 };
