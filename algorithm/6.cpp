@@ -4,28 +4,26 @@ public:
         int i = 1;
         int j = numRows * 2 - 3;
         int n = s.length();
-        char *result = new char[n+1];
-        int top = 0;
+        
+        if (numRows == 1) {
+            return s;
+        }
+        
+        string result;
             
         for (int k = 0; k < n; k += numRows*2-2) {
-            result[top] = s[k];
-            top++;
+            result.append(1, s[k]);
         } 
         while (i <= j) {
             for (int a = i, b = j; a < n; a += numRows*2-2, b += numRows*2-2) {
-                result[top] = s[a];
-                top++;
+                result.append(1, s[a]);
                 if (b < n && i != j) {
-                    result[top] = s[b];
-                    top++;
+                  result.append(1, s[b]);
                 }
             }
             i++;
             j--;
         }
-        result[n] = '\0';
-        string r(result);
-        delete [] result;
-        return r;
+        return result;
     }
 };
