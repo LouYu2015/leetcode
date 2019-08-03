@@ -30,7 +30,7 @@ public:
             
             result *= 10;
             
-            if (result > INT_MAX - str[i] - '0') {
+            if (result > INT_MAX - (str[i] - '0')) {
                 return negative? INT_MIN : INT_MAX;
             }
             
