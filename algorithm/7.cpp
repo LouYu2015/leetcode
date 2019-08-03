@@ -18,6 +18,7 @@ public:
                 i++;
                 break;
             default:
+                negative = false;
                 break;
         }
         
