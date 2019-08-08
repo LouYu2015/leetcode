@@ -15,7 +15,8 @@ public:
             for (int k = mapping[digits[i] - '2']; k < mapping[digits[i] - '2'  + 1]; k++) {
                 helper(digits, i + 1, result, current + (char)('a' + k));
             }
-        } else {
+        } else if (i > 0) {
+            // Save result only if the string is not empty
             result.push_back(current);
         }
     }

@@ -10,7 +10,7 @@ id, name, difficulty,time  ranking,space ranking
 12,Integer to Roman,2,13.99,9.29
 13,Roman to Integer,1,82.51,72.09
 15,3Sum,2,WA,WA
-17,Letter Combinations of a Phone Number,2,WA,WA
+17,Letter Combinations of a Phone Number,2,62.37,98.57
 455,Assign Cookies,1,89.2,76.21
 563,Binary Tree Tilt,1,60.48,9.92
 966,Vowel Spellchecker,2,91.48,17.24
