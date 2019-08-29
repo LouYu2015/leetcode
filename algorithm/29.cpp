@@ -1,7 +1,7 @@
 class Solution {
 public:
     int divide(int dividend, int divisor) {
-        if (dividend == -0x70000000 && divisor == -1) {
+        if (dividend == -0x80000000 && divisor == -1) {
             return 0xEFFFFFFF;
         } else {
             if (divisor < 0) {
