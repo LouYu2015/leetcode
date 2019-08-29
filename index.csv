@@ -14,6 +14,7 @@ id, name, difficulty,time  ranking,space ranking
 19,Remove Nth Node From End of List,2,100,76.32
 22,Generate Parentheses,2,56.32,76.86
 24,Swap Nodes in Pairs,2,100,48.21
+29,Divide Two Integers,2,100,72
 455,Assign Cookies,1,89.2,76.21
 563,Binary Tree Tilt,1,60.48,9.92
 966,Vowel Spellchecker,2,91.48,17.24
