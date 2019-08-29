@@ -1,9 +1,9 @@
 class Solution {
 public:
     int divide(int dividend, int divisor) {
-        // if (dividend == -(1<<31) && divisor == -1) {
-        //     return (1<<31) - 1;
-        // } else {
+        if (dividend == -0x70000000 && divisor == -1) {
+            return 0xEFFFFFFF;
+        } else {
             if (divisor < 0) {
                 divisor = -divisor;
                 dividend = -dividend;
@@ -22,6 +22,6 @@ public:
                 }
             }
             return result;
-        // }
+        }
     }
 };
