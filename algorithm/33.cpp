@@ -14,6 +14,7 @@ public:
                 } else {
                     high = mid;
                 }
+                mid = (low + high) / 2;
             }
             seperator = low + 1;
         }
@@ -28,6 +29,7 @@ public:
             } else {
                 low = mid;
             }
+            mid = (low + high) / 2;
         }
         
         if (nums[low % n] == target) {
