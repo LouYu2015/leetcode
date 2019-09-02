@@ -3,13 +3,13 @@ public:
     vector<int> searchRange(vector<int>& nums, int target) {
         int lowerBound = binarySearch(nums, target);
         
-        if (nums[lowerBound] != target) {
+        if (lowerBound >= nums.size() || nums[lowerBound] != target) {
             vector<int> result;
             result.push_back(-1);
             result.push_back(-1);
             return result;
         } else {
-            int upperBound = binarySearch(nums, target + 1);
+            int upperBound = binarySearch(nums, target + 1) - 1;
             vector<int> result;
             result.push_back(lowerBound);
             result.push_back(upperBound);
