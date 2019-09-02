@@ -18,6 +18,7 @@ id, name, difficulty,time  ranking,space ranking
 31,Next Permutation,2,75.18,100
 33,Search in Rotated Sorted Array,2,79.27,79.52
 34,Find First and Last Position of Element in Sorted Array,2,100,59.34
+36,Valid Sudoku,2,98.23,97.44
 455,Assign Cookies,1,89.2,76.21
 563,Binary Tree Tilt,1,60.48,9.92
 966,Vowel Spellchecker,2,91.48,17.24
