@@ -27,6 +27,7 @@ public:
             } else {
                 high = mid;
             }
+            mid = (low + high) / 2;
         }
         return low + 1;
     }
