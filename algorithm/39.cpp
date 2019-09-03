@@ -25,14 +25,19 @@ public:
         } else {
             int current = candidates.back();
             candidates.pop_back();
-            set<set<int>> without_current = combinationSumHelper(candidates, target);
-            set<set<int>> with_current = combinationSumHelper(candidates, target - current);
-            for (set<int> item : with_current) {
-                item.insert(current);
-                without_current.insert(item);
+            set<set<int>> result;
+            
+            for (int n = 0; target - current * n >= 0; n++) {
+                set<set<int>> sub_result = combinationSumHelper(candidates, target - n * current);
+                for (set<int> item : sub_result) {
+                    for (int k = 0; k < n; k++) {
+                        item.insert(current);
+                    }
+                    result.insert(item);
+                }
             }
             candidates.push_back(current);
-            return without_current;
+            return result;
         }
     }
 };
