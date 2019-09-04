@@ -19,8 +19,15 @@ public:
     }
     
     string convertToString(vector<char> num) {
-        reverse(num.begin(), num.end());
-        return string(num.begin(), num.end());
+        while (num.size() > 0 && num.back() == '0') {
+            num.pop_back();
+        }
+        if (num.size() == 0) {
+            return string("0");
+        } else {
+            reverse(num.begin(), num.end());
+            return string(num.begin(), num.end());
+        }
     }
     
     vector<char> add(vector<char> a, vector<char> b) {
