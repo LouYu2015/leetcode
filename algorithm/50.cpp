@@ -5,23 +5,23 @@ public:
         int k = n;
         // invariant: x^n = result * x^k
         while (k > 0) {
-            if (k % 2 == 1) {
-                result *= x;
-                k -= 1;
-            } else {
+            if (k % 2 == 0) {
                 x *= x;
                 k /= 2;
+            } else {
+                result *= x;
+                k -= 1;
             }
         }
         
         // invariant: x^n = result * x^k
         while (k < 0) {
             if (k % 2 == 0) {
-                result /= x;
-                k += 1;
-            } else {
                 x *= x;
                 k /= 2;
+            } else {
+                result /= x;
+                k += 1;
             }
         }
         return result;
