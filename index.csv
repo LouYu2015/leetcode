@@ -28,6 +28,7 @@ id, name, difficulty,time  ranking,space ranking
 49,Group Anagrams,2,59.5,59.7
 50,"Pow(x, n)",2,59.38,42.86
 54,Spiral Matrix,2,100,100
+55,Jump Game,2,71.55,100
 455,Assign Cookies,1,89.2,76.21
 563,Binary Tree Tilt,1,60.48,9.92
 966,Vowel Spellchecker,2,91.48,17.24
