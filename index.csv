@@ -30,6 +30,7 @@ id, name, difficulty,time  ranking,space ranking
 54,Spiral Matrix,2,100,100
 55,Jump Game,2,71.55,100
 56,Merge Intervals,2,33.32,30.23
+59,Spiral Matrix II,2,100,100
 455,Assign Cookies,1,89.2,76.21
 563,Binary Tree Tilt,1,60.48,9.92
 966,Vowel Spellchecker,2,91.48,17.24
