@@ -19,8 +19,10 @@ public:
                     j--;
                 }
             }
-            k = k % p;
-            p /= i;
+            if (i != 0) {
+                k = k % p;
+                p /= i;
+            }
         }
         return result;
     }
