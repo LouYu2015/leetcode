@@ -9,29 +9,39 @@
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
+        // Special case: list is empty
         if (head == nullptr) {
             return head;
         }
         
-        ListNode *tail = head;
-        for (int i = 0; i < k; i++) {
-            if (tail->next == nullptr) {
-                tail->next = head;
-            }
-            tail = tail->next;
+        int n = 1;
+        ListNode *tail;
+        // Invariant: total number of nodes = n + number of nodes in the list starting at tail->next
+        for (tail = head; tail->next != nullptr; tail = tail->next) {
+            n++;
         }
         
-        ListNode *newTail = head;
-        while (tail->next != head) {
-            if (tail->next == nullptr) {
-                tail->next = head;
-                break;
-            }
-            tail = tail->next;
-            newTail = newTail->next;
+        // 'tail' now points to the last node
+        // Make the list circular
+        tail->next = head;
+        
+        // Convert k to the index of new tail
+        k = n - (k % n) - 1;
+        if (k == -1) {
+            k += n;
         }
-        ListNode *newHead = newTail->next;
-        newTail->next = nullptr;
+        
+        // Find the new tail
+        ListNode *current = head;
+        // Invariant: 'current' is the i^th node in the original list
+        for (int i = 0; i < k; i++) {
+            current = current->next;
+        }
+        
+        // Split the list
+        ListNode *newHead = current->next;
+        current->next = nullptr;
+        
         return newHead;
     }
 };
