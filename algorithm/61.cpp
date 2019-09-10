@@ -15,20 +15,22 @@ public:
         
         ListNode *tail = head;
         for (int i = 0; i < k; i++) {
+            if (tail->next == nullptr) {
+                tail->next = head;
+            }
             tail = tail->next;
         }
         
-        if (tail == nullptr) {
-            return head;
-        }
-        
         ListNode *newTail = head;
-        while (tail->next != nullptr) {
+        while (tail->next != head) {
+            if (tail->next == nullptr) {
+                tail->next = head;
+                break;
+            }
             tail = tail->next;
             newTail = newTail->next;
         }
         ListNode *newHead = newTail->next;
-        tail->next = head;
         newTail->next = nullptr;
         return newHead;
     }
