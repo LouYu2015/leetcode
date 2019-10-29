@@ -36,6 +36,7 @@ id, name, difficulty,time  ranking,space ranking
 62,Unique Paths,2,55.07,79.69
 64,Minimum Path Sum,2,99.34,
 71,Simplify Path,2,75.34,
+73,Set Matrix Zeroes,2,8.58,70.37
 455,Assign Cookies,1,89.2,76.21
 563,Binary Tree Tilt,1,60.48,9.92
 966,Vowel Spellchecker,2,91.48,17.24

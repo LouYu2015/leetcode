@@ -10,6 +10,19 @@ public:
             return;
         }
         
+        bool first_row_zero = false;
+        bool first_col_zero = false;
+        for (int x = 0; x < m; x++) {
+            if (matrix[x][0] == 0) {
+                first_col_zero = true;
+            }
+        }
+        for (int y = 0; y < n; y++) {
+            if (matrix[0][y] == 0) {
+                first_row_zero = true;
+            }
+        }
+        
         for (int x = 1; x < m; x++) {
             for (int y = 1; y < n; y++) {
                 if (matrix[x][y] == 0) {
@@ -24,18 +37,6 @@ public:
                 if (matrix[x][0] == 0 || matrix[0][y] == 0) {
                     matrix[x][y] = 0;
                 }
-            }
-        }
-        bool first_row_zero = false;
-        bool first_col_zero = false;
-        for (int x = 0; x < m; x++) {
-            if (matrix[x][0] == 0) {
-                first_col_zero = true;
-            }
-        }
-        for (int y = 0; y < n; y++) {
-            if (matrix[0][y] == 0) {
-                first_row_zero = true;
             }
         }
         if (first_col_zero) {
