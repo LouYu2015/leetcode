@@ -20,6 +20,7 @@ public:
             int end = find_next(path, current);
             string name = path.substr(current, end - current);
             if (name == "" || name == ".") {
+                current = end;
                 continue;
             }
             if (name == "..") {
@@ -29,6 +30,7 @@ public:
             } else {
                 names.push_back(name);
             }
+            //cout << name << endl;
             current = end;
         }
         string result;
