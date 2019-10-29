@@ -1,43 +1,25 @@
 class Solution {
 public:
-    int myAtoi(string str) {
-        int i = 0;
-        
-        while (iswspace(str[i])) {
-            i++;
+    int reverse(int x) {
+        int result;
+        bool is_negative = x < 0;
+        if (x < 0) {
+            x = -x;
         }
-        
-        bool negative;
-        switch (str[i]) {
-            case '+':
-                negative = false;
-                i++;
-                break;
-            case '-':
-                negative = true;
-                i++;
-                break;
-            default:
-                negative = false;
-                break;
-        }
-        
-        int result = 0;
-        while (isdigit(str[i])) {
-            if (result > INT_MAX / 10) {
-                return negative? INT_MIN : INT_MAX;
-            }
-            
+        while (x != 0) {
             result *= 10;
-            
-            if (result > INT_MAX - (str[i] - '0')) {
-                return negative? INT_MIN : INT_MAX;
+            if (result < 0) {
+                return 0;
             }
-            
-            result += str[i] - '0';
-            i++;
+            result += x % 10;
+            if (result < 0) {
+                return 0;
+            }
+            x /= 10;
         }
-        
-        return negative? -result : result;
+        if (result == INT_MIN) {
+            return 0;
+        }
+        return is_negative? -result : result;
     }
 };
