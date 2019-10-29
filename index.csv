@@ -34,6 +34,7 @@ id, name, difficulty,time  ranking,space ranking
 60,Permutation Sequence,2,66.38,100
 61,Rotate List,2,98.82,78.57
 62,Unique Paths,2,55.07,79.69
+64,Minimum Path Sum,2,99.34,
 455,Assign Cookies,1,89.2,76.21
 563,Binary Tree Tilt,1,60.48,9.92
 966,Vowel Spellchecker,2,91.48,17.24
