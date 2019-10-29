@@ -23,7 +23,9 @@ public:
                 continue;
             }
             if (name == "..") {
-                names.pop_back();
+                if (names.size() > 0) {
+                    names.pop_back();
+                }
             } else {
                 names.push_back(name);
             }
