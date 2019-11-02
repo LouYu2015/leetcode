@@ -2,7 +2,7 @@ class Solution {
 public:
     bool isValid(string s) {
         vector<char> stack;
-        hash_map<char, char> bracket_pair;
+        unordered_map<char, char> bracket_pair;
         bracket_pair[')'] = '(';
         bracket_pair['}'] = '{';
         bracket_pair[']'] = '[';
