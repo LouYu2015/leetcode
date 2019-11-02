@@ -10,7 +10,7 @@ public:
         if (n - i < k) {
             return;
         }
-        if (current.size() == k) {
+        if (k == 0) {
             result.push_back(current);
             return;
         }
