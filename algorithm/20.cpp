@@ -16,6 +16,6 @@ public:
                 stack.pop_back();
             }
         }
-        return true;
+        return stack.size() == 0;
     }
 };
