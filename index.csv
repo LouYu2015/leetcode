@@ -19,6 +19,7 @@ id, name, difficulty,time  ranking,space ranking
 21,Merge Two Sorted Lists,1,98.94,66.39
 22,Generate Parentheses,2,56.32,76.86
 24,Swap Nodes in Pairs,2,100,48.21
+26,Remove Duplicates from Sorted Array,1,93.51,66.25
 29,Divide Two Integers,2,100,72
 31,Next Permutation,2,75.18,100
 33,Search in Rotated Sorted Array,2,79.27,79.52
