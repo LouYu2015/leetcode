@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int directions[][] = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+    int directions[4][2] = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
     
     bool exist(vector<vector<char>>& board, string word) {
         int m = board.size();
