@@ -3,6 +3,10 @@ public:
     int directions[4][2] = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
     
     bool exist(vector<vector<char>>& board, string word) {
+        if (word.length() == 0) {
+            return true;
+        }
+        
         int m = board.size();
         if (m == 0) {
             return word.length() == 0;
@@ -32,7 +36,7 @@ public:
             int next_x = x + dx;
             int next_y = y + dx;
             if (next_x >= 0 && next_x < board.size() && next_y >= 0 && next_y < board[0].size()
-                    && board[next_x][next_y] == word[i]) {
+                    && board[next_x][next_y] == word[i + 1]) {
                 bool found = search_helper(board, word, i + 1, next_x, next_y);
                 if (found) {
                     board[x][y] = current;
