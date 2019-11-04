@@ -48,6 +48,7 @@ id, name, difficulty,time  ranking,space ranking
 75,Sort Colors,2,69.43,96.49
 77,Combinations,2,96.12,45
 78,Subsets,2,55.6,27.12
+79,Word Search,2,85.21,100
 455,Assign Cookies,1,89.2,76.21
 563,Binary Tree Tilt,1,60.48,9.92
 966,Vowel Spellchecker,2,91.48,17.24

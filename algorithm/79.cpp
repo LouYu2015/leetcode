@@ -25,18 +25,20 @@ public:
     }
     
     bool search_helper(vector<vector<char>> &board, string &word, int i, int x, int y) {
-        if (i == word.length() - 1 && board[x][y] == word[i]) {
+        if (i >= word.length() || board[x][y] != word[i]) {
+            return false;
+        }
+        if (i == word.length() - 1) {
             return true;
         }
         char current = board[x][y];
         board[x][y] = '\0';
-        for (int i = 0; i < 4; i++) {
-            int dx = directions[i][0];
-            int dy = directions[i][1];
+        for (int dir = 0; dir < 4; dir++) {
+            int dx = directions[dir][0];
+            int dy = directions[dir][1];
             int next_x = x + dx;
-            int next_y = y + dx;
-            if (next_x >= 0 && next_x < board.size() && next_y >= 0 && next_y < board[0].size()
-                    && board[next_x][next_y] == word[i + 1]) {
+            int next_y = y + dy;
+            if (next_x >= 0 && next_x < board.size() && next_y >= 0 && next_y < board[0].size()) {
                 bool found = search_helper(board, word, i + 1, next_x, next_y);
                 if (found) {
                     board[x][y] = current;
