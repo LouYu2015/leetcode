@@ -14,7 +14,6 @@ public:
         bool has_last = false;
         int last;
         while (head != nullptr) {
-            ListNode *to_delete = nullptr;
             bool keep = true;
             if (has_last && last == head->val) {
                 keep = false;
@@ -32,17 +31,12 @@ public:
                     new_tail->next = head;
                     new_tail = head;
                 }
-            } else {
-                to_delete = head;
             }
             
             has_last = true;
             last = head->val;
             
             head = head->next;
-            if (to_delete) {
-                delete to_delete;
-            }
         }
         return new_head;
     }
