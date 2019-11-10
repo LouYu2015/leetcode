@@ -54,6 +54,7 @@ id, name, difficulty,time  ranking,space ranking
 78,Subsets,2,55.6,27.12
 79,Word Search,2,85.21,100
 80,Remove Duplicates from Sorted Array II,2,6.35,100
+81,Search in Rotated Sorted Array II,2,60.7,54.17
 455,Assign Cookies,1,89.2,76.21
 547,Friend Circles,2,16.8,72.73
 563,Binary Tree Tilt,1,60.48,9.92

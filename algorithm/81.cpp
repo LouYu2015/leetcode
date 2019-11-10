@@ -2,6 +2,9 @@ class Solution {
 public:
     bool search(vector<int>& nums, int target) {
         int n = nums.size();
+        if (n == 0) {
+            return false;
+        }
         int low = find_start(nums, 0, n - 1);
         if (low == -1) {
             low = 0;
