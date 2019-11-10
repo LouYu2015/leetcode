@@ -38,7 +38,9 @@ public:
             
             head = head->next;
         }
-        new_tail->next = nullptr;
+        if (new_tail != nullptr) {
+            new_tail->next = nullptr;
+        }
         return new_head;
     }
 };
