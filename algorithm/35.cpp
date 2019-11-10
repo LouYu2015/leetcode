@@ -15,6 +15,6 @@ public:
                 high = mid;
             }
         }
-        return nums[low] == target? target : target + 1;
+        return nums[low] == target? low : low + 1;
     }
 };
