@@ -40,6 +40,7 @@ id, name, difficulty,time  ranking,space ranking
 54,Spiral Matrix,2,100,100
 55,Jump Game,2,71.55,100
 56,Merge Intervals,2,33.32,30.23
+58,Length of Last Word,1,100,100
 59,Spiral Matrix II,2,100,100
 60,Permutation Sequence,2,66.38,100
 61,Rotate List,2,98.82,78.57
