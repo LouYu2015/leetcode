@@ -38,6 +38,7 @@ public:
             
             head = head->next;
         }
+        new_tail->next = nullptr;
         return new_head;
     }
 };
