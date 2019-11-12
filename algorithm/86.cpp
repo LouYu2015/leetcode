@@ -34,6 +34,9 @@ public:
         if (l1 != nullptr) {
             l1->next = l2_head;
         }
+        if (l2 != nullptr) {
+            l2->next = nullptr;
+        }
         return l1_head == nullptr? l2_head : l1_head;
     }
 };
