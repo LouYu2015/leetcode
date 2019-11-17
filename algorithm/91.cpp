@@ -6,7 +6,7 @@ public:
             ways[i] = s[i] == '0' ? 0 : ways[i + 1]; // Zero is not valid
             if (i + 1 < s.length()) {
                 int num = (s[i] - '0') * 10 + s[i + 1] - '0';
-                if (num <= 26 && num >= 1) {
+                if (num <= 26 && num >= 10) {
                     ways[i] += ways[i + 2];
                 }
             }
