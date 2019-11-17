@@ -1,7 +1,7 @@
 class Solution {
 public:
     int numDecodings(string s) {
-        vector<int> ways(s.length() + 2, 0); // ways[i] = Number of ways to decode the string starting from index i
+        vector<int> ways(s.length() + 2, 1); // ways[i] = Number of ways to decode the string starting from index i
         for (int i = s.length() - 1; i >= 0; i--) {
             ways[i] = ways[i + 1];
             if (i + 1 < s.length()) {
