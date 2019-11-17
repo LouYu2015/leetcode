@@ -17,7 +17,7 @@ public:
         int num = item.first;
         int num_count = item.second;
         
-        count.remove(num);
+        count.erase(num);
         
         result = subsetHelper(count);
         int result_size = result.size();
