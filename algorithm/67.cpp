@@ -18,6 +18,6 @@ public:
             sum.push_back(carry + '0');
         }
         reverse(sum.begin(), sum.end());
-        return string(sum);
+        return string(sum.begin(), sum.end());
     }
 };
