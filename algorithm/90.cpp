@@ -11,6 +11,7 @@ public:
     vector<vector<int>> subsetHelper(map<int, int> count) {
         vector<vector<int>> result;
         if (count.size() == 0) {
+            result.push_back(vector<int>());
             return result;
         }
         pair<int, int> item = *count.begin();
