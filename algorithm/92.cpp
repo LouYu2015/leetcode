@@ -31,6 +31,7 @@ public:
         // Construct a reversed list
         ListNode *reversed_head = current;
         ListNode *reversed_tail = reversed_head;
+        current = current->next;
         count--; // Inserted the first element
         while (count > 0) {
             ListNode *next_node = current->next;
