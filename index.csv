@@ -49,6 +49,7 @@ id, name, difficulty,time  ranking,space ranking
 66,Plus One,1,66.1,100
 67,Add Binary,1,80.54,65.45
 69,Sqrt(x),1,100,96.49
+70,Climbing Stairs,1,100,70
 71,Simplify Path,2,75.34,
 73,Set Matrix Zeroes,2,8.58,70.37
 74,Search a 2D Matrix,2,93.77,93.94
