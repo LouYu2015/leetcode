@@ -25,9 +25,6 @@ public:
             if (current > 255) {
                 break;
             }
-            if (i >= 1 && current == 0) {
-                break;
-            }
             vector<string> child_result = restore_helper(s, start + i + 1, depth - 1);
             for (string solution : child_result) {
                 if (solution.length() == 0) {
@@ -35,6 +32,9 @@ public:
                 } else {
                     result.push_back(s.substr(start, i + 1) + "." + solution);
                 }
+            }
+            if (current == 0) {
+                break;
             }
         }
         return result;
