@@ -30,7 +30,7 @@ public:
             }
             vector<string> child_result = restore_helper(s, start + i + 1, depth - 1);
             for (string solution : child_result) {
-                if (s.length() == 0) {
+                if (solution.length() == 0) {
                     result.push_back(s.substr(start, i + 1));
                 } else {
                     result.push_back(s.substr(start, i + 1) + "." + solution);
