@@ -26,14 +26,17 @@ public:
             int &step = steps.back();
             switch (step) {
              case 0:
+                // Must change step before pushing to stack
+                // std::vector may move the element after insertion
+                step++;
                 // Traverse left
                 if (current_node->left != nullptr) {
                     stack.push_back(current_node->left);
                     steps.push_back(0);
                 }
-                step++;
                 break;
              case 1:
+                step++;
                 // Output current
                 result.push_back(current_node->val);
                 // Traverse right
@@ -41,7 +44,6 @@ public:
                     stack.push_back(current_node->right);
                     steps.push_back(0);
                 }
-                step++;
                 break;
              case 2:
                 // Return
