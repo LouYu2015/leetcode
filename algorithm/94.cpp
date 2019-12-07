@@ -22,9 +22,9 @@ public:
         steps.push_back(0);
         
         while (stack.size() > 0) {
-            TreeNode *current_node = *stack.last();
-            int &step = *steps.last();
-            swtich (step) {
+            TreeNode *current_node = stack.back();
+            int &step = steps.back();
+            switch (step) {
              case 0:
                 // Traverse left
                 if (current_node->left != nullptr) {
