@@ -68,6 +68,7 @@ id, name, difficulty,time  ranking,space ranking
 91,Decode Ways,2,65.49,88.24
 92,Reverse Linked List II,2,100,87.5
 94,Binary Tree Inorder Traversal,2,89,
+96,Unique Binary Search Trees,2,52.56,97.73
 455,Assign Cookies,1,89.2,76.21
 547,Friend Circles,2,16.8,72.73
 563,Binary Tree Tilt,1,60.48,9.92
