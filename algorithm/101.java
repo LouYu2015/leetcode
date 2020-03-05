@@ -13,8 +13,8 @@ class Solution {
             return true;
         }
         
-        Queue<TreeNode> left = new ArrayDeque<>();
-        Queue<TreeNode> right = new ArrayDeque<>();
+        Queue<TreeNode> left = new LinkedList<>();
+        Queue<TreeNode> right = new LinkedList<>();
         
         left.offer(root.left);
         right.offer(root.right);
