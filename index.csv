@@ -72,6 +72,7 @@ id, name, difficulty,time  ranking,space ranking
 98,Validate Binary Search Tree,2,89.1,97.92
 100,Same Tree,1,100,5.75
 101,Symmetric Tree,1,27.75,72.11
+102,Binary Tree Level Order Traversal,2,100,5.33
 455,Assign Cookies,1,89.2,76.21
 547,Friend Circles,2,16.8,72.73
 563,Binary Tree Tilt,1,60.48,9.92
