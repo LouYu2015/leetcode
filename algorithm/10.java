@@ -9,25 +9,32 @@ class Solution {
             return true;
         } else if (sc >= s.length() || pc >= p.length()) {
             System.out.println("11:" + sc + " " + pc + " " + "false");
+            if (pc == p.length() - 2 && p.charAt(pc + 1) == '*') {
+                return true;
+            }
             return false;
-        }
-        
-        if (p.charAt(pc) == '.') {
-            return isMatch(s, sc + 1, p, pc + 1);
         }
         
         boolean result = false;
         if (pc + 1 < p.length() && p.charAt(pc + 1) == '*') {
-            if (s.charAt(sc) == p.charAt(pc)) {
+            if (isMatch(s.charAt(sc), p.charAt(pc))) {
                 result = result || isMatch(s, sc + 1, p, pc);
                 System.out.println("23:" + sc + " " + pc + " " + result);
             }
             result = result || isMatch(s, sc, p, pc + 2);
             System.out.println("26:" + sc + " " + pc + " " + result);
         } else {
-            result = s.charAt(sc) == p.charAt(pc) && isMatch(s, sc + 1, p, pc + 1);
+            result = isMatch(s.charAt(sc), p.charAt(pc)) && isMatch(s, sc + 1, p, pc + 1);
             System.out.println("29:" + sc + " " + pc + " " + result);
         }
         return result;
+    }
+    
+    public boolean isMatch(char s, char p) {
+        if (p == '.') {
+            return true;
+        } else {
+            return s == p;
+        }
     }
 }
