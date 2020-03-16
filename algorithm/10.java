@@ -4,9 +4,9 @@ class Solution {
     }
     
     public boolean isMatch(String s, int sc, String p, int pc) {
-        if (sc == s.length && pc == p.length) {
+        if (sc == s.length() && pc == p.length()) {
             return true;
-        } else if (sc >= s.length || pc >= p.legth) {
+        } else if (sc >= s.length() || pc >= p.length()) {
             return false;
         }
         
@@ -15,7 +15,7 @@ class Solution {
         }
         
         boolean result = false;
-        if (sc + 1 < s.length && s.charAt(sc + 1) == '*') {
+        if (sc + 1 < s.length() && s.charAt(sc + 1) == '*') {
             if (s.charAt(sc) == p.charAt(pc)) {
                 result = result || isMatch(s, sc, p, pc + 1);
             }
