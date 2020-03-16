@@ -11,7 +11,7 @@ class Solution {
         char prevChar = '\n';
         int count = 0;
         StringBuffer result = new StringBuffer();
-        for (char c : prevResult) {
+        for (char c : prevResult.toCharArray()) {
             if (c == prevChar) {
                 count++;
             } else {
