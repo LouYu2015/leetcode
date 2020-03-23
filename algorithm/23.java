@@ -9,13 +9,14 @@
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode head = null;
+        ListNode tail = null;
         
         PriorityQueue<ListNode> queue = new PriorityQueue<>(1,
                                                             new Comparator<ListNode> () {
                                                                 @Override
                                                                 public int compare(ListNode n1,
                                                                                    ListNode n2) {
-                                                                    return -Integer.compare(n1.val, n2.val);
+                                                                    return Integer.compare(n1.val, n2.val);
                                                                 }
                                                             });
         
@@ -29,8 +30,13 @@ class Solution {
             ListNode currentNode = queue.poll();
             ListNode nextNode = currentNode.next;
             
-            currentNode.next = head;
-            head = currentNode;
+            currentNode.next = null;
+            if (head == null) {
+                head = tail = currentNode;
+            } else {
+                tail.next = currentNode;
+                tail = currentNode;
+            }
             
             if (nextNode != null) {
                 queue.offer(nextNode);

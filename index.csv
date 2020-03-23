@@ -18,6 +18,7 @@ id, name, difficulty,time  ranking,space ranking
 20,Valid Parentheses,1,100,97.67
 21,Merge Two Sorted Lists,1,98.94,66.39
 22,Generate Parentheses,2,56.32,76.86
+23,Merge k Sorted Lists,3,81.23,41.53
 24,Swap Nodes in Pairs,2,100,48.21
 26,Remove Duplicates from Sorted Array,1,93.51,66.25
 27,Remove Element,1,100,100
