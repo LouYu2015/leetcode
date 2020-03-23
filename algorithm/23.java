@@ -10,7 +10,7 @@ class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode head = null;
         
-        PriorityQueue<ListNode> queue = new PriorityQueue<>(0,
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(1,
                                                             new Comparator<ListNode> () {
                                                                 @Override
                                                                 public int compare(ListNode n1,
@@ -19,7 +19,7 @@ class Solution {
                                                                 }
                                                             });
         
-        for (ListNode list : lists.asList()) {
+        for (ListNode list : lists) {
             if (list != null) {
                 queue.offer(list);
             }
